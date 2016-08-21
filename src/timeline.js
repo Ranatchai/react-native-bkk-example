@@ -32,28 +32,14 @@ export default class Timeline extends Component {
             <Icon name="ios-arrow-back" />
           </Button>
 
-          <Title>Timeline 1</Title>
+          <Title>Timeline</Title>
 
           <Button transparent>
             <Icon name="ios-menu" />
           </Button>
 	      </Header>
-        <Content style={styles.container}>        	
+        <Content style={styles.container}>
         	<Card style={styles.card}>
-            <CardItem>
-              <Thumbnail source={require('./assets/profile.jpg')} />
-              <Text>Ranatchai Chernbamrung</Text>
-            </CardItem>
-
-            <CardItem>
-              <Image style={styles.image} resizeMode={Image.resizeMode.contain} source={require('./assets/cover.jpg')} />
-            </CardItem>
-
-            <CardItem>
-              <Icon name={'ios-star-outline'} style={{color : '#ED4A6A'}} />              
-            </CardItem>
-         	</Card>
-         	<Card style={styles.card}>
             <CardItem>
               <Thumbnail source={require('./assets/panj.jpg')} />
               <Text>Panjamapong Sermsawatsri</Text>
@@ -67,6 +53,20 @@ export default class Timeline extends Component {
               <Icon name={'ios-star-outline'} style={{color : '#ED4A6A'}} />              
             </CardItem>
          	</Card>
+        	<Card style={styles.card}>
+            <CardItem>
+              <Thumbnail source={require('./assets/profile.jpg')} />
+              <Text>Ranatchai Chernbamrung</Text>
+            </CardItem>
+
+            <CardItem>
+              <Image style={styles.image} resizeMode={Image.resizeMode.contain} source={require('./assets/cover.jpg')} />
+            </CardItem>
+
+            <CardItem>
+              <Icon name={'ios-star-outline'} style={{color : '#ED4A6A'}} />              
+            </CardItem>
+         	</Card>        	
         </Content>
       </Container>
 		);

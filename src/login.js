@@ -3,17 +3,23 @@ import {
   StyleSheet,
   Text,
   View,
-  Platform,
-  ListView,
   Image,
+  Platform,
   StatusBar,
   LayoutAnimation,
   ActivityIndicator,
-  // TextInput
 } from 'react-native';
+
+// import {
+//   StyleSheet,
+//   Text,
+//   View,
+//   Image,
+// } from 'react-native';
+
 import Button from 'apsl-react-native-button'
+
 import { Makiko as TextInput } from 'react-native-textinput-effects';
-// import TextInput from 'react-native-floating-label-text-input';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import * as Animatable from 'react-native-animatable';
 import { TimelineRoute } from './routes';
@@ -22,7 +28,8 @@ export default class Login extends Component {
 	constructor() {
 		super();
 		this.state = {
-			showLoginForm: false
+			showLoginForm: false,
+			showLoading: false,
 		};
 	}
 
@@ -98,19 +105,19 @@ export default class Login extends Component {
 	}
 
 	render() {
+		console.log('hello world from react native code');
+		
 		const { showLoginForm, showLoading } = this.state;
+		// const showLoginForm = this.state.showLoginForm;
+		// const showLoading = this.state.showLoading;
 		return (
 			<View style={styles.container}>
 				<View style={styles.content}>
-					<View style={[styles.logoContent, showLoginForm && styles.logoContentSmall]}>
+					<View style={[styles.logoContainer, showLoginForm && styles.logoContainerSmall]}>
 						<Image
 							source={require('./assets/logo.png')}
 							style={styles.logo}
-							// easing="linear"
-							// animation="rotate"
-							// duration={10000}
-							// iterationCount="infinite"
-							/>
+						/>
 						<Text style={styles.title}>ReactJS Bangkok 1.0.0</Text>
 					</View>
 					<View>
@@ -136,17 +143,12 @@ const styles = StyleSheet.create({
 	content: {
 		alignSelf: 'center'
 	},
-	logoContent: {
-		transform: [{
-			scale: 1
-		}],
+	logoContainer: {
+		transform: [{ scale: 1 }],
 		alignSelf: 'center'
 	},
-	logoContentSmall: {
-		transform: [{
-			scale: 0.8
-			// scale: 1
-		}]
+	logoContainerSmall: {
+		transform: [{ scale: 0.8 }],
 	},
 	logo: {
 		width: 150,
@@ -159,7 +161,7 @@ const styles = StyleSheet.create({
 		marginTop: 16	,
 		marginBottom: 16,
 		textAlign: 'center'
-	},
+	},	
 	buttonStyle: {
 		marginTop: 20,
 		borderColor: 'white',
