@@ -1,3 +1,3 @@
 # react-native-bkk-example
 ไฟล์ slide ครับ
-https://github.com/reactbkk/1.0.0/blob/gh-pages/react-native.pdf
+https://reactbkk.github.io/1.0.0/react-native.pdf 
